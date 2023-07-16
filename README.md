@@ -25,4 +25,4 @@ In order to use this neovim config, place `init.lua` from this repo into `~/.con
 **View > Preferences > Profiles > $UNNAMED**
 - Check custom font
 Using [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
-- Cell spacing: 2.015 x height
+- Cell spacing: 1.015 x height
