@@ -190,6 +190,9 @@ require('lazy').setup({
         },
         build = ':TSUpdate',
     },
+    {
+      'davisdude/vim-love-docs'
+    }
 
     -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
     --       These are some example plugins that I've included in the kickstart repository.
@@ -443,6 +446,9 @@ local servers = {
     lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },
+            diagnostics = {
+                globals = {'love','vim'}
+            },
             telemetry = { enable = false },
         },
     },
