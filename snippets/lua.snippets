@@ -1,0 +1,46 @@
+snippet luaclass Basic lua class 
+	local ClassName = {}
+
+	function ClassName:init()
+	end
+	function ClassName:update(dt)
+	end
+	function ClassName:draw()
+	end
+	function ClassName:keypressed(key)
+	end
+	function ClassName:mousepressed(x,y,button)
+	end
+	function ClassName:wheelmoved(x,y)
+	end
+
+	setmetatable(ClassName, {
+		-- __index = ParentClass,
+		__call = function(self,props)
+			local props = props or {}
+			local newClassName = {}
+			-- local newClassName = ParentClass(props)
+			table.deepCopy(newClassName, ClassName)
+			table.copy(newClassName, props)
+			setmetatable(newClassName, {__index = ClassName})
+			newClassName:init()
+			return newClassName
+		end
+	})
+
+	return ClassName
+
+snippet privatefunctions Private Functions Comment
+	-----------------------------
+	-- [[ Private Functions ]] --
+	-----------------------------
+
+snippet corefunctions Core Functions Comment
+	--------------------------
+	-- [[ Core Functions ]] --
+	--------------------------
+
+snippet publicfunctions Public Functions Comment
+	----------------------------
+	-- [[ Public Functions ]] --
+	----------------------------
