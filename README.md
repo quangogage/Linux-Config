@@ -19,3 +19,10 @@ sudo apt-get install neovim
 ## Neovim config
 Currently using the [Kickstart](https://github.com/nvim-lua/kickstart.nvim) as my base template with some minor modifications.  
 In order to use this neovim config, place `init.lua` from this repo into `~/.config/nvim/`
+
+## Gnome terminal config
+###### I know, I am ashamed using this terminal...
+**View > Preferences > Profiles > $UNNAMED**
+- Check custom font
+Using [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+- Cell spacing: 2.015 x height
