@@ -20,6 +20,11 @@ sudo apt-get install neovim
 Currently using the [Kickstart](https://github.com/nvim-lua/kickstart.nvim) as my base template with some minor modifications.  
 In order to use this neovim config, place `init.lua` from this repo into `~/.config/nvim/`
 
+## Neovide
+Right now I'm trying out the [Neovide](https://github.com/neovide/neovide) GUI.  
+If you want to try it out, install their latest release's AppImage from their github, and place it in `~/My Programs`.
+That, alongside the custom alias in `.bashrc` will allow the ability to run it from the terminal.
+
 ## Gnome terminal config
 ###### I know, I am ashamed using this terminal...
 **View > Preferences > Profiles > $UNNAMED**
