@@ -31,3 +31,7 @@ That, alongside the custom alias in `.bashrc` will allow the ability to run it f
 - Check custom font
 Using [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
 - Cell spacing: 1.015 x height
+
+## Multi-Monitor Setup
+`sudo apt install arandr`  
+`arandr`
