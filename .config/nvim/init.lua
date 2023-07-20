@@ -5,7 +5,6 @@
 =====================================================================
 
 Kickstart.nvim is *not* a distribution.
-
 Kickstart.nvim is a template for your own configuration.
   The goal is that you can read every line of code, top-to-bottom, understand
   what your configuration is doing, and modify it to suit your needs.
@@ -138,7 +137,41 @@ require('lazy').setup({
             vim.cmd.colorscheme 'onedark'
         end,
     },
-
+    {
+        'savq/melange-nvim',
+        priority = 1001,
+        config = function()
+          vim.cmd.colorscheme 'melange'
+        end,
+    },
+  {
+        'rebelot/kanagawa.nvim',
+        priority = 1001,
+        config = function()
+          vim.cmd.colorscheme 'kanagawa'
+        end,
+    },
+{
+        'ellisonleao/gruvbox.nvim',
+        priority = 1001,
+        config = function()
+          vim.cmd.colorscheme 'gruvbox'
+        end,
+    },
+  {
+    'lifepillar/vim-solarized8',
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'solarized8'
+    end,
+  },
+    {
+        'rose-pine/neovim',
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme "rose-pine"
+        end,
+    },
     {
         -- Set lualine as statusline
         'nvim-lualine/lualine.nvim',
@@ -194,7 +227,10 @@ require('lazy').setup({
 
     {
         'junegunn/goyo.vim',
-    }
+    },
+  {
+    'preservim/nerdtree'
+  },
 
     -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
     --       These are some example plugins that I've included in the kickstart repository.
@@ -533,6 +569,24 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+
+-- [[ GUI setting stuff ]]
+vim.o.guifont = "IBM Plex mono"
+vim.o.mouse = "a"
+vim.g.neovide_scale_factor = 1.1 
+vim.g.neovide_padding_left = 15
+vim.g.neovide_padding_right = 15
+vim.g.neovide_theme = "Slate"
+vim.g.neovide_refresh_rate = 144
+vim.g.neovide_cursor_animation_length = 0.035
+vim.g.neovide_cursor_trail_size = 0.75
+vim.g.neovide_no_vsync = true
+vim.opt.linespace = 5
+
+-- [[ Nerd Tree ]]
+vim.keymap.set('n', '<leader>b', ':NERDTreeToggle<CR>') 
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
