@@ -21,6 +21,10 @@ sudo apt-get install neovim
 Neovide has given me some troubles. 
 Once it's installed, make sure to launch it with the `--novsync` tag.
 
+## Multi-Monitor Setup
+`sudo apt install arandr`  
+`arandr`
+
 # Software
 - OS: [Ubuntu](https://ubuntu.com/)
 - Desktop Enviroment: [i3](https://i3wm.org/)
