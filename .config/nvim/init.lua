@@ -172,6 +172,33 @@ require('lazy').setup({
             vim.cmd.colorscheme "rose-pine"
         end,
     },
+  { 'Abstract-IDE/Abstract-cs',
+    priority = 1001,
+    config = function()
+      vim.cmd.colorscheme "abscs"
+    end,
+  },
+  {
+    'sainnhe/sonokai',
+    priority = 1001,
+    config = function()
+      vim.cmd.colorscheme "sonokai"
+    end,
+  },
+  {
+  'nvimdev/zephyr-nvim',
+    priority = 1001,
+    config = function()
+      vim.cmd.colorscheme "zephyr"
+    end
+  },
+  {
+'mhartington/oceanic-next',
+    priority = 1001,
+    config = function()
+      vim.cmd.colorscheme "OceanicNext"
+    end
+  },
     {
         -- Set lualine as statusline
         'nvim-lualine/lualine.nvim',
@@ -179,7 +206,7 @@ require('lazy').setup({
         opts = {
             options = {
                 icons_enabled = false,
-                theme = 'onedark',
+                theme = 'rose-pine',
                 component_separators = '|',
                 section_separators = '',
             },
@@ -228,10 +255,34 @@ require('lazy').setup({
     {
         'junegunn/goyo.vim',
     },
-  {
-    'preservim/nerdtree'
-  },
-
+    {
+        'preservim/nerdtree'
+    },
+    {
+        'romgrk/barbar.nvim'
+    },
+    {
+        'lewis6991/gitsigns.nvim'
+    },
+    {
+        'nvim-tree/nvim-web-devicons'
+    },
+    {'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+            -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+            -- animation = true,
+            -- insert_at_start = true,
+            -- …etc.
+        },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
+    },
+    {'simrat39/symbols-outline.nvim'},
+    --{'Bekaboo/dropbar.nvim'}, -- Requires NVIM 0.10.0 > 
     -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
     --       These are some example plugins that I've included in the kickstart repository.
     --       Uncomment any of the lines below to enable them.
@@ -486,11 +537,11 @@ local servers = {
 
     lua_ls = {
         Lua = {
-            workspace = { checkThirdParty = false },
+            workspace = { checkThirdParty = true },
             diagnostics = {
                 globals = {'love','vim'}
             },
-            telemetry = { enable = false },
+            telemetry = { enable = true },
         },
     },
 }
@@ -541,19 +592,19 @@ cmp.setup {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
-    ['<CR>'] = cmp.mapping.confirm {
+    ['<Tab>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_locally_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
+    -- ['<Tab>'] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_next_item()
+    --   elseif luasnip.expand_or_locally_jumpable() then
+    --     luasnip.expand_or_jump()
+    --   else
+    --     fallback()
+    --   end
+    -- end, { 'i', 's' }),
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -574,18 +625,40 @@ cmp.setup {
 -- [[ GUI setting stuff ]]
 vim.o.guifont = "IBM Plex mono"
 vim.o.mouse = "a"
-vim.g.neovide_scale_factor = 1.1 
-vim.g.neovide_padding_left = 15
-vim.g.neovide_padding_right = 15
-vim.g.neovide_theme = "Slate"
+vim.g.neovide_hide_mouse_when_typing = true
+vim.g.neovide_scale_factor = 1.1
+vim.g.neovide_padding_left = 75
+vim.g.neovide_padding_right = 75
+vim.g.neovide_theme = "onedark"
 vim.g.neovide_refresh_rate = 144
-vim.g.neovide_cursor_animation_length = 0.035
-vim.g.neovide_cursor_trail_size = 0.75
+vim.g.neovide_cursor_animation_length = 0.03
+vim.g.neovide_cursor_trail_size = 0.8
 vim.g.neovide_no_vsync = true
-vim.opt.linespace = 5
+vim.opt.linespace = 0
+vim.g.neovide_cursor_animate_in_insert_mode = true
+vim.g.neovide_cursor_vfx_mode = ""
+vim.g.neovide_cursor_vfx_particle_lifetime = 1
+vim.g.neovide_cursor_vfx_particle_density = 25
+vim.g.neovide_cursor_vfx_opacity = 255
+vim.g.neovide_cursor_vfx_particle_speed = 1
 
 -- [[ Nerd Tree ]]
-vim.keymap.set('n', '<leader>b', ':NERDTreeToggle<CR>') 
+vim.keymap.set('n', '<leader>b', ':NERDTreeToggle<CR>')
+
+-- [[ Misc Custom Stuff ]]
+-- vim.wo.relativenumber = true
+
+-- Barbar
+local opts = { noremap = true, silent = true }
+vim.keymap.set("n", '<leader>h', '<Cmd>BufferPrevious<CR>', opts)
+vim.keymap.set("n", '<leader>l', '<Cmd>BufferNext<CR>', opts)
+
+-- Symbols outline
+require("symbols-outline").setup()
+vim.keymap.set("n", '<leader>v', '<Cmd>SymbolsOutline<CR>', opts)
+
+-- [[ Love2d ]] --
+vim.keymap.set("", "<F6>", ":w | :!love .<CR>",opts)
 
 
 -- The line beneath this is called `modeline`. See `:help modeline`

@@ -1,4 +1,5 @@
 snippet luaclass Basic lua class 
+	local util = require("util")({"table"})
 	local ClassName = {}
 
 	function ClassName:init()
@@ -7,21 +8,11 @@ snippet luaclass Basic lua class
 	end
 	function ClassName:draw()
 	end
-	function ClassName:keypressed(key)
-	end
-	function ClassName:mousepressed(x,y,button)
-	end
-	function ClassName:wheelmoved(x,y)
-	end
 
 	setmetatable(ClassName, {
-		-- __index = ParentClass,
-		__call = function(self,props)
-			local props = props or {}
+		__call = function(_)
 			local newClassName = {}
-			-- local newClassName = ParentClass(props)
-			table.deepCopy(newClassName, ClassName)
-			table.copy(newClassName, props)
+			util.table.deepCopy(newClassName, ClassName)
 			setmetatable(newClassName, {__index = ClassName})
 			newClassName:init()
 			return newClassName
