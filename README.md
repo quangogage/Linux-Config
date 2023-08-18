@@ -28,11 +28,11 @@ Once it's installed, make sure to launch it with the `--novsync` tag.
 # Software
 - OS: [Ubuntu](https://ubuntu.com/)
 - Desktop Enviroment: [i3](https://i3wm.org/)
-- Terminal: Gnome terminal...
+- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/conf/)
 - Text Editor [Neovim](https://neovim.io/)
 - (Optional) Text Editor GUI: [Neovide](https://github.com/neovide/neovide)
 
-###### Replace unstable with stable if you're feeling like a coward beta male.
+###### Replace unstable with stable if you're feeling like a cowardly beta male.
 
 ## Neovim config
 Currently using the [Kickstart](https://github.com/nvim-lua/kickstart.nvim) as my base template with some minor modifications.  
