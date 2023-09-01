@@ -1341,6 +1341,8 @@ require("catppuccin").setup({
     flavour = "mocha"
 })
 
+---Fuzzy finding in directory
+vim.keymap.set("n", "<C-s>", ":Telescope live_grep<CR>", opts)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

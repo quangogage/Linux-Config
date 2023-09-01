@@ -22,7 +22,8 @@ sudo apt install ripgrep
 ###### Replace unstable with stable if you're feeling like a cowardly beta male.
 
 ## Neovide Installation
-Neovide has given me some troubles. 
+Neovide has given me some troubles.   
+
 Once it's installed, make sure to launch it with the `--novsync` tag.
 
 ## Multi-Monitor Setup
@@ -30,7 +31,8 @@ Once it's installed, make sure to launch it with the `--novsync` tag.
 `arandr`
 
 ## Co-pilot setup
-Still trying this out for the first time. If I still have it in the future:
+Still trying this out for the first time. If I still have it in the future:  
+
 `:Copilot signin`
 `:Copilot enable`
 
@@ -52,19 +54,20 @@ likely to forget :^)
 
 ## i3 General.
 - `CMD+d` - Open application launcher
-- `CMD+enter` - open terminal
+- `CMD+enter` - Open terminal
 
 ## i3 Window Motions.
 I've rebound all of these to match their Vim navigation equivalents.
 - `CMD+j` - Focus window down
 - `CMD-k` - Focus window up
 - `CMD-l` - Focus window right
-- `CMD-h` - Focus window left
+- `CMD-h` - Focus window left  
+
 **Hold `SHIFT` in combination with these commands to move windows. 
 
 ## Neovim.
-- `<CMD+p>` - Search for files in directory.
-- `<CTRL+Enter>` - Autocomplete github copilot
+- `<CMD-p>` - Search for files in directory.
+- `<CTRL-Enter>` - Autocomplete github copilot
 - `<TAB>` - Autocomplete suggestion.
 - `:Tabularize/{char}` - Line up highlighted code based on the char.
 - `<F6>` - Launch directory as love.
@@ -75,3 +78,4 @@ I've rebound all of these to match their Vim navigation equivalents.
 - `<leader>b` - Open filesystem browser (neotree).
     - `z` - Collapse all.
 - `<CTRL-k>` - View signature documentation.
+- `<CTRL-s>` - Fuzzy find in current directory.
