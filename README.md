@@ -15,7 +15,11 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
+sudo apt install ripgrep
 ```
+###### Ripgrep is used for fuzzyfinding.
+
+###### Replace unstable with stable if you're feeling like a cowardly beta male.
 
 ## Neovide Installation
 Neovide has given me some troubles. 
@@ -25,6 +29,14 @@ Once it's installed, make sure to launch it with the `--novsync` tag.
 `sudo apt install arandr`  
 `arandr`
 
+## Co-pilot setup
+Still trying this out for the first time. If I still have it in the future:
+`:Copilot signin`
+`:Copilot enable`
+
+## Nvim Plugin Management
+`:Lazy`  
+  
 # Software
 - OS: [Ubuntu](https://ubuntu.com/)
 - Desktop Enviroment: [i3](https://i3wm.org/)
@@ -32,17 +44,7 @@ Once it's installed, make sure to launch it with the `--novsync` tag.
 - Text Editor [Neovim](https://neovim.io/)
 - (Optional) Text Editor GUI: [Neovide](https://github.com/neovide/neovide)
 
-###### Replace unstable with stable if you're feeling like a cowardly beta male.
 
-## Neovim config
-Currently using the [Kickstart](https://github.com/nvim-lua/kickstart.nvim) as my base template with some minor modifications.  
-
-## Gnome terminal config
-###### I know, I am ashamed using this terminal...
-**View > Preferences > Profiles > $UNNAMED**
-- Check custom font
-Using [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
-- Cell spacing: 1.015 x height
 
 # Keybinds
 There are obviously a lot so I won't be listing every single one - But I'll try to list the ones I feel like I would be most
@@ -59,3 +61,17 @@ I've rebound all of these to match their Vim navigation equivalents.
 - `CMD-l` - Focus window right
 - `CMD-h` - Focus window left
 **Hold `SHIFT` in combination with these commands to move windows. 
+
+## Neovim.
+- `<CMD+p>` - Search for files in directory.
+- `<CTRL+Enter>` - Autocomplete github copilot
+- `<TAB>` - Autocomplete suggestion.
+- `:Tabularize/{char}` - Line up highlighted code based on the char.
+- `<F6>` - Launch directory as love.
+- `<leader>v` - Display file symbols.
+    - `W` - Collapse all.
+- `<leader>h` - Open tab to the left.
+- `<leader>l` - Open tab to the right.
+- `<leader>b` - Open filesystem browser (neotree).
+    - `z` - Collapse all.
+- `<CTRL-k>` - View signature documentation.
