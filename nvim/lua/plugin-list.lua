@@ -65,15 +65,25 @@ return
             end,
         },
 
-        ---File tabs at top of window.
+        ---Harpoon, fast navigation.
         {
-            'romgrk/barbar.nvim',
-            dependencies = {'lewis6991/gitsigns.nvim','nvim-tree/nvim-web-devicons'},
-            init = function() vim.g.barbar_auto_setup = true end,
-            version = '^1.0.0'
+            "ThePrimeagen/harpoon",
+            branch = "harpoon2",
+            dependencies = { "nvim-lua/plenary.nvim" }
         },
 
+
+        ---File tabs at top of window.
+        {
+        'romgrk/barbar.nvim',
+        dependencies = {'lewis6991/gitsigns.nvim','nvim-tree/nvim-web-devicons'},
+        init = function() vim.g.barbar_auto_setup = true end,
+        version = '^1.0.0'
+        },
+
+
         ---Align things very satisfyingly.
+        ---:Tabularize/{char}
         { 'godlygeek/tabular' },
 
         ---Display symbols on right side of window.
@@ -90,5 +100,5 @@ return
         'navarasu/onedark.nvim',
         'sainnhe/everforest',
         'NLKNguyen/papercolor-theme',
-        'dracula/vim',
+        ---'dracula/vim', - Spitting an err
     }

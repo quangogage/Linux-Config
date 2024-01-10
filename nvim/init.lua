@@ -3,7 +3,7 @@ package.path = package.path .. ";../?.lua" ---Used to help source files in subdi
 
 
 ---Default colorscheme.
-local colorscheme = "Dracula"
+local colorscheme = "everforest"
 
 ---Linespace
 vim.opt.linespace = 0
@@ -17,7 +17,7 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 
 ---Share clipboard with system.
-vim.api.nvim_set_option("clipboard","unnamed")
+vim.api.nvim_set_option("clipboard","unnamedplus")
 
 ---Set leader key.
 vim.g.mapleader = ' '
@@ -82,6 +82,8 @@ require("plugin-setup-scripts.telescope")()
 require("plugin-setup-scripts.treesitter")(require("nvim-treesitter.configs"))
 require("plugin-setup-scripts.nvim-cmp")()
 require("neo-tree").setup()
+require("plugin-setup-scripts.harpoon")(require("harpoon"))
+
 
 ---Symbols outline
 ---(Toggle symbols pane).
