@@ -93,6 +93,8 @@ return
         ---Transparency
         'xiyaowong/transparent.nvim',
 
+        ---Fancy comment boxes and other things.
+        "LudoPinelli/comment-box.nvim",
 
         -------------------
         --- [[ THEMES ]] --

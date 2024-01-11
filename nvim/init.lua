@@ -2,14 +2,14 @@ local opts = { noremap = true, silent = true } ---Used often when setting up key
 package.path = package.path .. ";../?.lua" ---Used to help source files in subdirectories.
 
 
----Default colorscheme.
+--Default colorscheme.
 local colorscheme = "everforest"
 
 ---Linespace
 vim.opt.linespace = 0
 
 
--- Case-insensitive searching UNLESS \C or capital in search
+--Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
@@ -62,8 +62,8 @@ vim.keymap.set("", "<F6>", ":w | :!love .<CR>",opts)
 ---C-CR = Ctrl + Enter.
 vim.keymap.set("i", "<C-CR>", "copilot#Accept('<CR>')", {noremap = true, silent = true, expr=true, replace_keycodes = false })
 
----Fuzzy finding in directory.
----Uses grep, only works on linux I think?
+--Fuzzy finding in directory.
+--Uses grep, only works on linux I think?
 vim.keymap.set("n", "<C-s>", ":Telescope live_grep<CR>", opts)
 
 ---General Neovide.
@@ -83,7 +83,7 @@ require("plugin-setup-scripts.treesitter")(require("nvim-treesitter.configs"))
 require("plugin-setup-scripts.nvim-cmp")()
 require("neo-tree").setup()
 require("plugin-setup-scripts.harpoon")(require("harpoon"))
-
+require("plugin-setup-scripts.comment-box")()
 
 ---Symbols outline
 ---(Toggle symbols pane).

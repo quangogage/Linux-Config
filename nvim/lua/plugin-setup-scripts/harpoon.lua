@@ -9,8 +9,8 @@ return function(harpoon)
     })
 
     ---Navigation?
-    vim.keymap.set("n", "<leader>h", function() harpoon:list():append() end, opts)
-    vim.keymap.set("n", "<leader>j", function() harpoon:list():prepend() end, opts)
+    vim.keymap.set("n", "<leader>f", function() harpoon:list():append() end, opts)
+    vim.keymap.set("n", "<leader>g", function() harpoon:list():prepend() end, opts)
     vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
 
     vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end, opts)
