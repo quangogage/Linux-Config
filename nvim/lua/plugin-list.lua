@@ -91,7 +91,7 @@ return
         {'simrat39/symbols-outline.nvim'},
 
         ---Transparency
-        'xiyaowong/transparent.nvim',
+        ---'xiyaowong/transparent.nvim',
 
         ---Fancy comment boxes and other things.
         "LudoPinelli/comment-box.nvim",
@@ -101,6 +101,6 @@ return
         -------------------
         'navarasu/onedark.nvim',
         'sainnhe/everforest',
-        'NLKNguyen/papercolor-theme',
-        ---'dracula/vim', - Spitting an err
+        'sainnhe/gruvbox-material',
+        'Mofiqul/vscode.nvim'
     }

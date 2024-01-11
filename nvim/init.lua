@@ -3,7 +3,7 @@ package.path = package.path .. ";../?.lua" ---Used to help source files in subdi
 
 
 --Default colorscheme.
-local colorscheme = "everforest"
+local colorscheme = "gruvbox-material"
 
 ---Linespace
 vim.opt.linespace = 0
