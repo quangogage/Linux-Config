@@ -17,6 +17,9 @@ return
             },
         },
 
+        ---"Zen mode".
+        {"shortcuts/no-neck-pain.nvim", version = "*"},
+
         ---Treesitter.
         ---Does lots of stuff, I just use it for better syntax highlighting.
         {
@@ -72,6 +75,8 @@ return
             dependencies = { "nvim-lua/plenary.nvim" }
         },
 
+        ---Indent lines.
+        { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
         ---File tabs at top of window.
         {
@@ -91,16 +96,14 @@ return
         {'simrat39/symbols-outline.nvim'},
 
         ---Transparency
-        ---'xiyaowong/transparent.nvim',
+        --'xiyaowong/transparent.nvim',
 
         ---Fancy comment boxes and other things.
         "LudoPinelli/comment-box.nvim",
 
-        -------------------
-        --- [[ THEMES ]] --
-        -------------------
-        'navarasu/onedark.nvim',
-        'sainnhe/everforest',
-        'sainnhe/gruvbox-material',
-        'Mofiqul/vscode.nvim'
+        ---Status line
+        "nvim-lualine/lualine.nvim",
+
+        ---Leap - Fast search.
+        'ggandor/leap.nvim'
     }
