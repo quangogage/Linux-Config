@@ -12,4 +12,4 @@ Same with [`NEOVIM-README.md`](NEOVIM-README.md).
 I use [Neovide](https://github.com/neovide/neovide) off and on.
 
 ## Programming font
-[IMWritingMono Nerd Font Mono]("[font]%20iMWriting") (Not sure why I am no unable to find this on the web, so I uploaded it to this repo).
+[IMWritingMono Nerd Font Mono](%5Bfont%5D%20iMWriting) (Not sure why I am no unable to find this on the web, so I uploaded it to this repo).
