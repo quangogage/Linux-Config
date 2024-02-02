@@ -8,8 +8,7 @@ normal = {family = "IMWritingMono Nerd Font Mono"}
 
 [keyboard]
 bindings = [
-    { key = "Enter", mods = "Control", chars = "\u000D"},
     {key = "q", mods = "Control|Shift", action = "Quit"},
     {key = "w", mods = "Control|Shift", action = "Quit"},
-    {key = "Tab", mods = "Control", action = "ReceiveChar"},
+    {key = "n", mods = "Control|Shift", action = "CreateNewWindow"},
 ]

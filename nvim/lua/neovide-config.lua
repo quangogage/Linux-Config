@@ -4,7 +4,7 @@ return function()
     vim.g.neovide_refresh_rate           = 250
     vim.g.neovide_no_vsync               = true
     --vim.g.neovide_transparency           = 0.9
-    vim.o.guifont                        = "IMWritingMono Nerd Font Mono:h12"
+    vim.o.guifont                        = "IMWritingMono Nerd Font Mono:h10"
     ---vim.g.transparency = 0.95
 
     ---Disable all animations.
