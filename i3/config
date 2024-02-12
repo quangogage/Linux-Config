@@ -17,9 +17,9 @@
 set $mod Mod1 
 
 # Refresh rate
-exec xrandr --output DP-2 --primary --mode 1920x1080 --rate 239.76 --pos 2560x1021 
-exec xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --pos 2560x0 
-exec xrandr --output DP-4 --mode 2560x1440 --right-of DP-2 --rate 165 --pos 4480x737
+exec xrandr --output DP-2 --primary --mode 1920x1080 --rate 239.76 --pos 0x1080 && \
+xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --pos 0x0 && \
+xrandr --output DP-4 --mode 2560x1440 --rate 165 --pos 1920x848
 
 # Load theme config from Gnome
 exec --no-startup-id /usr/lib/gsd-xsettings
