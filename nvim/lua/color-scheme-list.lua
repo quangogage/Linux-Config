@@ -6,4 +6,5 @@ return {
     'crispybaccoon/evergarden',
     'rose-pine/neovim',
     'HoNamDuong/hybrid.nvim',
+    'marko-cerovac/material.nvim'
 }

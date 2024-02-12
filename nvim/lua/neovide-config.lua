@@ -3,14 +3,14 @@ return function()
     vim.g.neovide_scale_factor           = 1
     vim.g.neovide_refresh_rate           = 250
     vim.g.neovide_no_vsync               = true
-    --vim.g.neovide_transparency           = 0.9
-    vim.o.guifont                        = "IMWritingMono Nerd Font Mono:h10"
+    vim.g.neovide_transparency           = 0.96
+    vim.o.guifont                        = "IMWritingMono Nerd Font Mono:h11"
     ---vim.g.transparency = 0.95
 
     ---Disable all animations.
-    vim.g.neovide_cursor_animation_length = 0
-    vim.g.neovide_cursor_trail_length     = 0
-    vim.g.neovide_scroll_animation_length = 0
+    -- vim.g.neovide_cursor_animation_length = 0
+    -- vim.g.neovide_cursor_trail_length     = 0
+    -- vim.g.neovide_scroll_animation_length = 0
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │ Custom Keybinds:                                        │

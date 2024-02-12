@@ -9,7 +9,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.signcolumn = "yes"
 
 --Default colorscheme.
-local colorscheme = "oxocarbon"
+local colorscheme = "gruvbox-material"
 
 -- ──────────────────────────────────────────────────────────────────────
 -- ╭─────────────────────────────────────────────────────────╮
@@ -24,6 +24,9 @@ vim.o.smartcase = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
+
+---Color column (column on the right side of the screen).
+vim.o.colorcolumn = "80"
 
 ---Highlight the current cursor line.
 vim.o.cursorline = true
@@ -77,7 +80,8 @@ vim.keymap.set("n", '<leader>l', '<Cmd>BufferNext<CR>', opts)
 
 
 ---Launch love2d directory.
-vim.keymap.set("", "<F6>", ":w | :!love .<CR>", opts)
+---vim.keymap.set("", "<F6>", ":w | :!love .<CR>", opts)
+---Currently using the new love plugin.
 
 ---Copilot completion.
 ---C-CR = Ctrl + Enter.

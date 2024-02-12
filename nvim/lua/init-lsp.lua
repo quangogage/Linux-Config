@@ -1,5 +1,4 @@
 return function()
-
     --  This function gets run when an LSP connects to a particular buffer.
     local on_attach = function(client, bufnr)
         -- NOTE: Remember that lua is a real programming language, and as such it is possible
@@ -50,7 +49,7 @@ return function()
     --  Add any additional override configuration in the following tables. They will be passed to
     --  the `settings` field of the server config. You must look up that documentation yourself.
     local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -90,5 +89,16 @@ return function()
                 settings = servers[server_name],
             }
         end,
+    }
+
+    local cmp_nvim_lsp = require "cmp_nvim_lsp"
+
+    require("lspconfig").clangd.setup {
+        on_attach = on_attach,
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        cmd = {
+            "clangd",
+            "--offset-encoding=utf-16",
+        },
     }
 end

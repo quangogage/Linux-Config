@@ -4,6 +4,21 @@ return
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
 
+    ---New love2d plugin.
+    {
+        "S1M0N38/love2d.nvim",
+        cmd = "LoveRun",
+        lazy = true,
+        opts = {},
+        keys = {
+            --{ "<leader>v",  desc = "LÖVE" },
+            --{ "<leader>vv", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
+            --{ "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
+            { "<F6>", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
+            { "<F7>", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" }
+        },
+    },
+
     ---Copilot.
     { 'https://github.com/github/copilot.vim' },
 
@@ -90,7 +105,7 @@ return
     { 'godlygeek/tabular' },
 
     ---Transparency
-    --'xiyaowong/transparent.nvim',
+    'xiyaowong/transparent.nvim',
 
     ---Fancy comment boxes and other things.
     "LudoPinelli/comment-box.nvim",
@@ -123,5 +138,8 @@ return
     ---Context
     ---Shows your current context...
     ---Kind of hard to explain.
-    'nvim-treesitter/nvim-treesitter-context'
+    'nvim-treesitter/nvim-treesitter-context',
+
+    ---Debug c++.
+    'mfussenegger/nvim-dap',
 }
