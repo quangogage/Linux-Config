@@ -20,6 +20,7 @@ return function()
 
         nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
         nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+        nvim_command('autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()')
         nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
         nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
         nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
@@ -49,7 +50,7 @@ return function()
     --  Add any additional override configuration in the following tables. They will be passed to
     --  the `settings` field of the server config. You must look up that documentation yourself.
     local servers = {
-        clangd = {},
+        -- clangd = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -91,14 +92,11 @@ return function()
         end,
     }
 
-    local cmp_nvim_lsp = require "cmp_nvim_lsp"
-
-    require("lspconfig").clangd.setup {
-        on_attach = on_attach,
-        capabilities = cmp_nvim_lsp.default_capabilities(),
-        cmd = {
-            "clangd",
-            "--offset-encoding=utf-16",
-        },
-    }
+    -- Format on save
+    vim.api.nvim_create_autocmd('BufWritePre', {
+        pattern = "*.lua",
+        callback = function()
+            vim.lsp.buf.format({ async = false })
+        end
+    })
 end
