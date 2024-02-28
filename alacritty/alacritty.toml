@@ -1,4 +1,4 @@
-working_directory = "/users/gagep"
+# working_directory = "/users/gagep" # Use on windows.
 
 [colors]
 transparent_background_colors = true
