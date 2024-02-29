@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true } ---Used often when setting up keybinds.
-package.path = package.path .. ";../?.lua" ---Used to help source files in subdirectories.
+package.path = package.path .. ";../?.lua"     ---Used to help source files in subdirectories.
 
 ---Disable netrw - I use nvim-tree instead.
 vim.g.loaded_netrw = 1
@@ -33,11 +33,11 @@ vim.o.cursorline = true
 
 ---Fill in blanks (tabs, spaces..)
 vim.opt.listchars = {
-	-- eol      = '¬',
-	-- space    = '⸱',
-	-- trail    = '•',
-	-- extends  = '…',
-	-- precedes = '…',
+    -- eol      = '¬',
+    -- space    = '⸱',
+    -- trail    = '•',
+    -- extends  = '…',
+    -- precedes = '…',
 }
 vim.opt.list = true
 
@@ -79,17 +79,16 @@ vim.keymap.set("n", "<leader>h", "<Cmd>BufferPrevious<CR>", opts)
 vim.keymap.set("n", "<leader>l", "<Cmd>BufferNext<CR>", opts)
 
 ---Launch love2d directory.
----vim.keymap.set("", "<F6>", ":w | :!love .<CR>", opts)
----Currently using the new love plugin.
+vim.keymap.set("", "<F6>", ":w | :!love .<CR>", opts)
 
 ---Copilot completion.
 ---C-CR = Ctrl + Enter.
 ---C-Tab = Control + Tab.
 vim.keymap.set(
-	"i",
-	"<C-J>",
-	"copilot#Accept('<CR>')",
-	{ noremap = true, silent = true, expr = true, replace_keycodes = false }
+    "i",
+    "<C-J>",
+    "copilot#Accept('<CR>')",
+    { noremap = true, silent = true, expr = true, replace_keycodes = false }
 )
 
 --Fuzzy finding in directory.
@@ -112,6 +111,8 @@ require("plugin-setup-scripts.comment-box")()
 require("nvim-tree").setup()
 require("leap").create_default_mappings()
 require("lualine").setup({})
+require("plugin-setup-scripts.noice")()
+
 
 ---
 ---Tabularize.
@@ -120,17 +121,17 @@ vim.keymap.set("v", "<leader>a", ":Tabularize /=<CR>", opts)
 
 ---Specs (animate cursor when jumping).
 require("specs").setup({
-	show_jumps = true,
-	min_jump = 5,
-	popup = {
-		delay_ms = 0, -- delay before popup displays
-		inc_ms = 10, -- time increments used for fade/resize effects
-		blend = 100, -- starting blend, between 0-100 (fully transparent), see :h winb
-		width = 35,
-		winhl = "PMenu",
-		fader = require("specs").linear_fader,
-		resizer = require("specs").slide_resizer,
-	},
+    show_jumps = true,
+    min_jump = 5,
+    popup = {
+        delay_ms = 0, -- delay before popup displays
+        inc_ms = 10, -- time increments used for fade/resize effects
+        blend = 100, -- starting blend, between 0-100 (fully transparent), see :h winb
+        width = 35,
+        winhl = "PMenu",
+        fader = require("specs").linear_fader,
+        resizer = require("specs").slide_resizer,
+    },
 })
 
 ---

@@ -1,144 +1,164 @@
 return {
-	---Git plugins.
-	"tpope/vim-fugitive",
-	"tpope/vim-rhubarb",
+    ---Git plugins.
+    "tpope/vim-fugitive",
+    "tpope/vim-rhubarb",
 
-	---New love2d plugin.
-	{
-		"S1M0N38/love2d.nvim",
-		cmd = "LoveRun",
-		lazy = true,
-		opts = {},
-		keys = {
-			--{ "<leader>v",  desc = "LÖVE" },
-			--{ "<leader>vv", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
-			--{ "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
-			{ "<F6>", "<cmd>LoveRun<cr>", desc = "Run LÖVE" },
-			{ "<F7>", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
-		},
-	},
+    ---New love2d plugin.
+    {
+        "S1M0N38/love2d.nvim",
+        cmd = "LoveRun",
+        lazy = true,
+        opts = {},
+        keys = {
+            --{ "<leader>v",  desc = "LÖVE" },
+            --{ "<leader>vv", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
+            --{ "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
+            -- { "<F6>", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
+            -- { "<F7>", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
+        },
+    },
 
-	---Copilot.
-	{ "https://github.com/github/copilot.vim" },
+    ---Stylua formatting.
+    { 'git@github.com:ckipp01/stylua-nvim.git' },
 
-	---LSP and required plugins.
-	{
-		"neovim/nvim-lspconfig",
-		dependencies = {
-			{ "williamboman/mason.nvim", config = true },
-			"williamboman/mason-lspconfig.nvim",
-			"folke/neodev.nvim",
-		},
-	},
+    ---Copilot.
+    { "https://github.com/github/copilot.vim" },
 
-	---"Zen mode".
-	{ "shortcuts/no-neck-pain.nvim", version = "*" },
+    ---LSP and required plugins.
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            { "williamboman/mason.nvim", config = true },
+            "williamboman/mason-lspconfig.nvim",
+            "folke/neodev.nvim",
+        },
+    },
 
-	---Treesitter.
-	---Does lots of stuff, I just use it for better syntax highlighting.
-	{
-		"nvim-treesitter/nvim-treesitter",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter-textobjects",
-		},
-		build = ":TSUpdate",
-	},
+    ---"Zen mode".
+    { "shortcuts/no-neck-pain.nvim",          version = "*" },
 
-	---Autocompletion & snippets.
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"L3MON4D3/LuaSnip",
-			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-nvim-lsp",
-			"rafamadriz/friendly-snippets",
-		},
-	},
+    ---Treesitter.
+    ---Does lots of stuff, I just use it for better syntax highlighting.
+    {
+        "nvim-treesitter/nvim-treesitter",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter-textobjects",
+        },
+        build = ":TSUpdate",
+    },
 
-	---Useful plugin to show you pending keybinds.
-	{ "folke/which-key.nvim", opts = {} },
+    ---Autocompletion & snippets.
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
+            "hrsh7th/cmp-nvim-lsp",
+            "rafamadriz/friendly-snippets",
+        },
+    },
 
-	---Directory browser.
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-	},
+    ---Useful plugin to show you pending keybinds.
+    { "folke/which-key.nvim",          opts = {} },
 
-	---"gc" to comment highlighted lines.
-	{ "numToStr/Comment.nvim", opts = {} },
+    ---Directory browser.
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
 
-	---Fuzzy Finder (files, lsp, etc).
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
-	{
-		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "make",
-		cond = function()
-			return vim.fn.executable("make") == 1
-		end,
-	},
+    ---"gc" to comment highlighted lines.
+    { "numToStr/Comment.nvim",         opts = {} },
 
-	---Harpoon, fast navigation.
-	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" },
-	},
+    ---Fuzzy Finder (files, lsp, etc).
+    { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+    {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        cond = function()
+            return vim.fn.executable("make") == 1
+        end,
+    },
 
-	---Indent lines.
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    ---Harpoon, fast navigation.
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
 
-	---File tabs at top of window.
-	{
-		"romgrk/barbar.nvim",
-		dependencies = { "lewis6991/gitsigns.nvim", "nvim-tree/nvim-web-devicons" },
-		init = function()
-			vim.g.barbar_auto_setup = true
-		end,
-		version = "^1.0.0",
-	},
+    ---Indent lines.
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
-	---Align things very satisfyingly.
-	---:Tabularize/{char}
-	{ "godlygeek/tabular" },
+    ---File tabs at top of window.
+    {
+        "romgrk/barbar.nvim",
+        dependencies = { "lewis6991/gitsigns.nvim", "nvim-tree/nvim-web-devicons" },
+        init = function()
+            vim.g.barbar_auto_setup = true
+        end,
+        version = "^1.0.0",
+    },
 
-	---Transparency
-	"xiyaowong/transparent.nvim",
+    ---Align things very satisfyingly.
+    ---:Tabularize/{char}
+    { "godlygeek/tabular" },
 
-	---Fancy comment boxes and other things.
-	"LudoPinelli/comment-box.nvim",
+    ---Transparency
+    --"xiyaowong/transparent.nvim",
 
-	---Status line
-	"nvim-lualine/lualine.nvim",
+    ---Fancy comment boxes and other things.
+    "LudoPinelli/comment-box.nvim",
 
-	---Leap - Fast search.
-	"ggandor/leap.nvim",
+    ---Status line
+    "nvim-lualine/lualine.nvim",
 
-	---Animate cursor when jumping.
-	"edluffy/specs.nvim",
+    ---Leap - Fast search.
+    "ggandor/leap.nvim",
 
-	---Improve lsp.
-	---Adds a lot of misc features
-	---Breadcrumbs.
-	---Symbol outline :Lspsaga outline
-	---Code actions <leader>ca
-	{
-		"nvimdev/lspsaga.nvim",
-		config = function()
-			require("lspsaga").setup({})
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons",
-		},
-	},
+    ---Animate cursor when jumping.
+    "edluffy/specs.nvim",
 
-	---Context
-	---Shows your current context...
-	---Kind of hard to explain.
-	"nvim-treesitter/nvim-treesitter-context",
+    ---Improve lsp.
+    ---Adds a lot of misc features
+    ---Breadcrumbs.
+    ---Symbol outline :Lspsaga outline
+    ---Code actions <leader>ca
+    {
+        "nvimdev/lspsaga.nvim",
+        config = function()
+            require("lspsaga").setup({})
+        end,
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
 
-	---Debug c++.
-	"mfussenegger/nvim-dap",
+    -- Move command line and make it look nice.
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
+        }
+    },
+
+    ---Context
+    ---Shows your current context...
+    ---Kind of hard to explain.
+    "nvim-treesitter/nvim-treesitter-context",
+
+    ---Debug c++.
+    "mfussenegger/nvim-dap",
 }
