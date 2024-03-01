@@ -112,6 +112,7 @@ require("nvim-tree").setup()
 require("leap").create_default_mappings()
 require("lualine").setup({})
 require("plugin-setup-scripts.noice")()
+require("plugin-setup-scripts.nvim-notify")()
 
 
 ---

@@ -95,7 +95,7 @@ return function()
                 commands = {
                     Format = {
                         function()
-                            require("stylua-nvim").format_file()
+                            -- require("stylua-nvim").format_file()
                         end,
                     }
                 }
