@@ -18,9 +18,6 @@ return {
         },
     },
 
-    ---Stylua formatting.
-    { 'git@github.com:ckipp01/stylua-nvim.git' },
-
     ---Copilot.
     { "https://github.com/github/copilot.vim" },
 
@@ -94,12 +91,9 @@ return {
 
     ---File tabs at top of window.
     {
-        "romgrk/barbar.nvim",
-        dependencies = { "lewis6991/gitsigns.nvim", "nvim-tree/nvim-web-devicons" },
-        init = function()
-            vim.g.barbar_auto_setup = true
-        end,
-        version = "^1.0.0",
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons'
     },
 
     ---Align things very satisfyingly.
@@ -158,6 +152,16 @@ return {
     ---Shows your current context...
     ---Kind of hard to explain.
     "nvim-treesitter/nvim-treesitter-context",
+
+    ---Git diff
+    "lewis6991/gitsigns.nvim",
+
+    ---Automatically insert closing symbols.
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
 
     ---Debug c++.
     "mfussenegger/nvim-dap",

@@ -10,9 +10,9 @@ return function()
     -- vim.g.neovide_background_color        = "#32302f"
 
     ---Disable all animations.
-    vim.g.neovide_cursor_animation_length = 0
-    vim.g.neovide_cursor_trail_length     = 0
-    vim.g.neovide_scroll_animation_length = 0
+    -- vim.g.neovide_cursor_animation_length = 0
+    -- vim.g.neovide_cursor_trail_length     = 0
+    -- vim.g.neovide_scroll_animation_length = 0
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │ Custom Keybinds:                                        │

@@ -1,5 +1,11 @@
+if vim.g.vscode then return end -- Don't use any of this fancieness in the nvim vscode plugin.
+
 local opts = { noremap = true, silent = true } ---Used often when setting up keybinds.
 package.path = package.path .. ";../?.lua"     ---Used to help source files in subdirectories.
+
+---Build keycommands.
+--vim.keymap.set("", "<F6>", ":w | :!love .<CR>", opts)
+vim.keymap.set("", "<F6>", ":w | :!bash build.sh<CR>", opts)
 
 ---Disable netrw - I use nvim-tree instead.
 vim.g.loaded_netrw = 1
@@ -9,7 +15,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.signcolumn = "yes"
 
 --Default colorscheme.
-local colorscheme = "gruvbox-material"
+local colorscheme = "fluoromachine"
 
 -- ──────────────────────────────────────────────────────────────────────
 -- ╭─────────────────────────────────────────────────────────╮
@@ -73,13 +79,13 @@ vim.o.scrolloff = 15
 ---Toggle file browser
 vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 
----Barbar.
+---Tab navigation.
 ---(Switch tabs).
-vim.keymap.set("n", "<leader>h", "<Cmd>BufferPrevious<CR>", opts)
-vim.keymap.set("n", "<leader>l", "<Cmd>BufferNext<CR>", opts)
+vim.keymap.set("n", "<leader>h", "<Cmd>BufferLineCyclePrev<CR>", opts)
+vim.keymap.set("n", "<leader>l", "<Cmd>BufferLineCycleNext<CR>", opts)
+vim.keymap.set("n", "<leader>W", "<Cmd>BufferLineCloseOthers<CR>", opts)
+vim.keymap.set("n", "<leader>w", "<Cmd>BufferLineCloseOthers<CR>", opts)
 
----Launch love2d directory.
-vim.keymap.set("", "<F6>", ":w | :!love .<CR>", opts)
 
 ---Copilot completion.
 ---C-CR = Ctrl + Enter.
@@ -113,6 +119,7 @@ require("leap").create_default_mappings()
 require("lualine").setup({})
 require("plugin-setup-scripts.noice")()
 require("plugin-setup-scripts.nvim-notify")()
+require("plugin-setup-scripts.bufferline")()
 
 
 ---
