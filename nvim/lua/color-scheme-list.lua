@@ -1,22 +1,22 @@
 return {
     'olimorris/onedarkpro.nvim',
     '/nyoom-engineering/oxocarbon.nvim',
-    'folke/tokyonight.nvim',
-    {
-        'maxmx03/fluoromachine.nvim',
-        config = function()
-            local fm = require 'fluoromachine'
-            fm.setup {
-                glow = false,
-                theme = 'retrowave' -- 'fluoromachine' | 'retrowave' | 'delta'
-            }
+    'sainnhe/gruvbox-material',
+    'gmr458/vscode_modern_theme.nvim',
+    'sainnhe/sonokai',
+    "Oniup/ignite.nvim",
+    'crispybaccoon/evergarden',
+    'rose-pine/neovim',
+    'HoNamDuong/hybrid.nvim',
+    'stankovictab/mgz.nvim',
 
-            vim.cmd.colorscheme('fluoromachine')
-        end
-    },
-    -- 'sainnhe/gruvbox-material',
-    --'gmr458/vscode_modern_theme.nvim',
-    -- 'crispybaccoon/evergarden',
-    -- 'rose-pine/neovim',
-    -- 'HoNamDuong/hybrid.nvim',
+    {
+        "presindent/ethereal.nvim",
+        opts = {
+            -- Options for customization go here.
+        },
+        config = function(_, opts)
+            vim.cmd [[colorscheme ethereal]]
+        end,
+    }
 }

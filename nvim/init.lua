@@ -15,7 +15,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.signcolumn = "yes"
 
 --Default colorscheme.
-local colorscheme = "fluoromachine"
+local colorscheme = "ignite"
 
 -- ──────────────────────────────────────────────────────────────────────
 -- ╭─────────────────────────────────────────────────────────╮
@@ -73,8 +73,8 @@ vim.o.expandtab = true
 ---Disable wrapping.
 vim.o.wrap = false
 
--- Force scroll to keep cursor within 15 lines.
-vim.o.scrolloff = 15
+-- Force scroll to keep cursor within x lines.
+vim.o.scrolloff = 7
 
 ---Toggle file browser
 vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
@@ -157,6 +157,16 @@ vim.keymap.set("n", "<C-t>", "<Cmd>Lspsaga term_toggle<CR>", opts)
 -- ╰─────────────────────────────────────────────────────────╯
 
 require("neovide-config")()
+
+-- ──────────────────────────────────────────────────────────────────────
+-- ╭─────────────────────────────────────────────────────────╮
+-- │ nvim-tree width                                         │
+-- ╰─────────────────────────────────────────────────────────╯
+require('nvim-tree').setup({
+    view = {
+        width = 40,
+    }
+})
 
 -- ──────────────────────────────────────────────────────────────────────
 -- ╭─────────────────────────────────────────────────────────╮
