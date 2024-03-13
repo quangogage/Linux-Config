@@ -17,8 +17,8 @@
 set $mod Mod1 
 
 # Refresh rate
-exec xrandr --output DP-2 --primary --mode 2560x1440 --rate 165 --pos 0x114 && \
-xrandr --output DP-4 --mode 1920x1080 --rate 239.76 --pos 2560x0 --rotate right
+exec xrandr --output DP-2 --mode 1920x1080 --rate 239.76 --pos 320x0 \
+--output DP-4 --mode 2560x1440 --rate 144 --primary --pos 0x1080
 
 # Media volume controls
 bindsym XF86AudioMute exec amixer sset 'Master' toggle

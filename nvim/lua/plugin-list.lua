@@ -113,7 +113,7 @@ return {
     "ggandor/leap.nvim",
 
     ---Animate cursor when jumping.
-    "edluffy/specs.nvim",
+    -- "edluffy/specs.nvim",
 
     ---Improve lsp.
     ---Adds a lot of misc features

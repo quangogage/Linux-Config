@@ -5,7 +5,7 @@ return function()
     vim.g.neovide_refresh_rate            = 250
     vim.g.neovide_no_vsync                = true
     vim.g.neovide_transparency            = transparency
-    vim.o.guifont                         = "IMWritingMono Nerd Font Mono:h11"
+    vim.o.guifont                         = "Cousine Nerd Font:h11"
     vim.g.transparency                    = transparency
     -- vim.g.neovide_background_color        = "#32302f"
 

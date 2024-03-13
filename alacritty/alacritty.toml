@@ -1,10 +1,11 @@
-# working_directory = "/users/gagep" # Use on windows.
+# working_directory = "/users/gagep" # Use on windows
 
 [colors]
 transparent_background_colors = true
 
 [font]
-normal = {family = "IMWritingMono Nerd Font Mono"}
+normal = {family = "Cousine Nerd Font"}
+offset = {x = 0, y = 4}
 
 [keyboard]
 bindings = [
