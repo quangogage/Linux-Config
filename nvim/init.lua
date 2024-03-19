@@ -81,11 +81,10 @@ vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 
 ---Tab navigation.
 ---(Switch tabs).
-vim.keymap.set("n", "<leader>h", "<Cmd>BufferLineCyclePrev<CR>", opts)
-vim.keymap.set("n", "<leader>l", "<Cmd>BufferLineCycleNext<CR>", opts)
-vim.keymap.set("n", "<leader>W", "<Cmd>BufferLineCloseOthers<CR>", opts)
-vim.keymap.set("n", "<leader>w", "<Cmd>BufferLineCloseOthers<CR>", opts)
-
+vim.keymap.set("n", "<leader>h", "<Cmd>BufferPrevious<CR>", opts)
+vim.keymap.set("n", "<leader>l", "<Cmd>BufferNext<CR>", opts)
+vim.keymap.set("n", "<leader>W", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
+vim.keymap.set("n", "<leader>w", "<Cmd>BufferClose<CR>", opts)
 
 ---Copilot completion.
 ---C-CR = Ctrl + Enter.
@@ -117,9 +116,9 @@ require("plugin-setup-scripts.comment-box")()
 require("nvim-tree").setup()
 require("leap").create_default_mappings()
 require("lualine").setup({})
-require("plugin-setup-scripts.noice")()
-require("plugin-setup-scripts.nvim-notify")()
-require("plugin-setup-scripts.bufferline")()
+require("wilder").setup({ modes = { ":", "/", "?" } })
+-- require("plugin-setup-scripts.noice")()
+-- require("plugin-setup-scripts.nvim-notify")()
 
 
 ---
