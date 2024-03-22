@@ -3,19 +3,16 @@ return {
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
 
+    ---Transparency
+    --"xiyaowong/transparent.nvim",
+
     ---New love2d plugin.
     {
         "S1M0N38/love2d.nvim",
         cmd = "LoveRun",
         lazy = true,
         opts = {},
-        keys = {
-            --{ "<leader>v",  desc = "LÖVE" },
-            --{ "<leader>vv", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
-            --{ "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
-            -- { "<F6>", "<cmd>LoveRun<cr>",  desc = "Run LÖVE" },
-            -- { "<F7>", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
-        },
+        keys = {},
     },
 
     ---Copilot.
@@ -32,7 +29,7 @@ return {
     },
 
     ---"Zen mode".
-    { "shortcuts/no-neck-pain.nvim",          version = "*" },
+    { "shortcuts/no-neck-pain.nvim", version = "*" },
 
     ---Treesitter.
     ---Does lots of stuff, I just use it for better syntax highlighting.
@@ -109,8 +106,6 @@ return {
     ---:Tabularize/{char}
     { "godlygeek/tabular" },
 
-    ---Transparency
-    --"xiyaowong/transparent.nvim",
 
     ---Fancy comment boxes and other things.
     "LudoPinelli/comment-box.nvim",
@@ -120,9 +115,6 @@ return {
 
     ---Leap - Fast search.
     "ggandor/leap.nvim",
-
-    ---Animate cursor when jumping.
-    -- "edluffy/specs.nvim",
 
     ---Improve lsp.
     ---Adds a lot of misc features
@@ -140,27 +132,7 @@ return {
         },
     },
 
-    -- Move command line and make it look nice.
-    -- {
-    --     "folke/noice.nvim",
-    --     event = "VeryLazy",
-    --     opts = {
-    --         -- add any options here
-    --     },
-    --     dependencies = {
-    --         -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    --         "MunifTanjim/nui.nvim",
-    --         -- OPTIONAL:
-    --         --   `nvim-notify` is only needed, if you want to use the notification view.
-    --         --   If not available, we use `mini` as the fallback
-    --         "rcarriga/nvim-notify",
-    --     }
-    -- },
 
-    ---Context
-    ---Shows your current context...
-    ---Kind of hard to explain.
-    -- "nvim-treesitter/nvim-treesitter-context",
 
     ---Git diff
     "lewis6991/gitsigns.nvim",
