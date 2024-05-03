@@ -8,6 +8,7 @@ to take a break for a while and may forget.
 `:Lazy`  
 
 ## Important Keybinds
+
 #### Coding
 - `<CTRL-s>` - Fuzzy find in current directory.
 - `<CTRL-j>` - Autocomplete github copilot
@@ -23,3 +24,12 @@ to take a break for a while and may forget.
 #### Window Management
 - `<CTRL-w>s/v` - Split window horizontally or vertically.
 - `<CTR>-w>h/j/k/l` - Switch to window in one of the directions.
+
+#### Surround/Quotation Marks/Etc
+[nvim-surround](https://github.com/kylechui/nvim-surround?tab=readme-ov-file#rocket-usage)
+- `ys{motion}{text object}` - Surround text object with text.
+    - `ysiw"` > `Hello` > `"Hello"`
+- `cs{old}{new}` - Change surrounding text.
+    - `cs"'` > `"Hello"` > `'Hello'`
+- `ds{char}` - Delete surrounding text.
+    - `ds"` > `"Hello"` > `Hello`
