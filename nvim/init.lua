@@ -31,6 +31,7 @@ require("plugin-setup-scripts.nvim-cmp")
 require("plugin-setup-scripts.no-neck-pain")
 require("plugin-setup-scripts.harpoon")
 
+-- require("love2d").setup({})
 require("nvim-tree").setup()
 require("leap").create_default_mappings()
 require("lualine").setup({})

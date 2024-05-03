@@ -1,5 +1,5 @@
 
-local transparency                    = 0.9
+local transparency                    = 1
 vim.g.neovide_hide_mouse_when_typing  = true
 vim.g.neovide_scale_factor            = 1
 vim.g.neovide_refresh_rate            = 250

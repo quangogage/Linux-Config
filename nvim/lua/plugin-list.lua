@@ -10,9 +10,12 @@ return {
     {
         "S1M0N38/love2d.nvim",
         cmd = "LoveRun",
-        lazy = true,
-        opts = {},
-        keys = {},
+        opts = { },
+        keys = {
+            { "<leader>v", desc = "LÖVE" },
+            { "<leader>vv", "<cmd>LoveRun<cr>", desc = "Run LÖVE" },
+            { "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
+        },
     },
 
     ---Copilot.
@@ -132,6 +135,16 @@ return {
         },
     },
 
+
+    -- Surround text with characters n stuff.
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup()
+        end
+    },
 
 
     ---Git diff
