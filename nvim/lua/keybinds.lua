@@ -21,12 +21,12 @@ vim.keymap.set("n", "<leader>w", "<Cmd>BufferClose<CR>", opts)
 ---Copilot completion.
 ---C-CR = Ctrl + Enter.
 ---C-Tab = Control + Tab.
-vim.keymap.set(
-    "i",
-    "<C-J>",
-    "copilot#Accept('<CR>')",
-    { noremap = true, silent = true, expr = true, replace_keycodes = false }
-)
+-- vim.keymap.set(
+--     "i",
+--     "<C-J>",
+--     "copilot#Accept('<CR>')",
+--     { noremap = true, silent = true, expr = true, replace_keycodes = false }
+-- )
 
 ---Diagnostics
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })

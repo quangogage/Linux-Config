@@ -1,6 +1,5 @@
 return {
     'olimorris/onedarkpro.nvim',
-    '/nyoom-engineering/oxocarbon.nvim',
     'sainnhe/gruvbox-material',
     'gmr458/vscode_modern_theme.nvim',
     'sainnhe/sonokai',

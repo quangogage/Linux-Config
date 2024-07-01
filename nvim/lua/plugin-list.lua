@@ -4,22 +4,36 @@ return {
     "tpope/vim-rhubarb",
 
     ---Transparency
-    --"xiyaowong/transparent.nvim",
+    "xiyaowong/transparent.nvim",
 
     ---New love2d plugin.
-    {
-        "S1M0N38/love2d.nvim",
-        cmd = "LoveRun",
-        opts = { },
-        keys = {
-            { "<leader>v", desc = "LÖVE" },
-            { "<leader>vv", "<cmd>LoveRun<cr>", desc = "Run LÖVE" },
-            { "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
-        },
-    },
+    -- {
+    --     "S1M0N38/love2d.nvim",
+    --     cmd = "LoveRun",
+    --     opts = { },
+    --     keys = {
+    --         { "<leader>v", desc = "LÖVE" },
+    --         { "<leader>vv", "<cmd>LoveRun<cr>", desc = "Run LÖVE" },
+    --         { "<leader>vs", "<cmd>LoveStop<cr>", desc = "Stop LÖVE" },
+    --     },
+    -- },
 
     ---Copilot.
-    { "https://github.com/github/copilot.vim" },
+    -- { "https://github.com/github/copilot.vim" },
+
+    ---Codeium (Copilot alternative - Free)
+    {
+        "Exafunction/codeium.vim",
+        event = "BufEnter",
+        config = function()
+            vim.keymap.set('i', '<C-j>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+        end
+    },
+
+    ---Rich Discord presence
+    {
+        "andweeb/presence.nvim",
+    },
 
     ---LSP and required plugins.
     {
@@ -86,8 +100,8 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
-    ---Indent lines.
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    ---Indent lines. !!! AN update caused this to started erroring my whole nvim. If re-enabling, be sure to uncomment the setup func in init.lua.
+    --{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
     ---File tabs at top of window.
     {

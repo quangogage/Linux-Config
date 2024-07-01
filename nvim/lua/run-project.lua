@@ -5,6 +5,10 @@ function vim.g.run_project()
         vim.cmd('!love .')
     elseif vim.fn.filereadable('package.json') == 1 then
         vim.cmd('!npm run start')
+    elseif vim.fn.filereadable('run.bat') == 1 then
+        vim.cmd('!run.bat')
+    elseif vim.fn.filereadable('run.sh') == 1 then
+        vim.cmd('!./run.sh')
     else
         vim.cmd('echo "Could not determine project type."')
     end
