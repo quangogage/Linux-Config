@@ -4,7 +4,11 @@ return {
     "tpope/vim-rhubarb",
 
     ---Transparency
-    "xiyaowong/transparent.nvim",
+    -- "xiyaowong/transparent.nvim",
+
+    ---Used for creating plugins, some poorly packaged color schemes may require
+    ---this?
+    "rktjmp/lush.nvim",
 
     ---New love2d plugin.
     -- {

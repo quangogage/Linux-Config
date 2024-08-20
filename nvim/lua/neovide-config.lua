@@ -1,13 +1,14 @@
 
-local transparency                    = 0.9
+-- local transparency                    = 0.95
 vim.g.neovide_hide_mouse_when_typing  = true
 vim.g.neovide_scale_factor            = 1
 vim.g.neovide_refresh_rate            = 250
 vim.g.neovide_no_vsync                = true
 vim.g.neovide_transparency            = transparency
-vim.o.guifont                         = "Cousine Nerd Font:h11"
+--vim.o.guifont                         = "Cousine Nerd Font:h11"
+vim.o.guifont                         = "JetBrainsMono Nerd Font Mono:h11"
 vim.g.transparency                    = transparency
--- vim.g.neovide_background_color        = "#32302f"
+-- vim.g.neovide_background_color        = "#32302F" -- Deprecated / doesn't function I believe.
 
 ---Disable all animations.
 -- vim.g.neovide_cursor_animation_length = 0

@@ -11,7 +11,7 @@ end
 
 
 ---Default colorscheme.
-local colorscheme = "gruvbox-material"
+local colorscheme = "rose-pine-moon"
 
 ---General vim configuration / options.
 require("vim-options")

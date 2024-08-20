@@ -8,6 +8,7 @@ return {
     'rose-pine/neovim',
     'HoNamDuong/hybrid.nvim',
     'stankovictab/mgz.nvim',
+    'ab-dx/ares.nvim',
 
     {
         "presindent/ethereal.nvim",

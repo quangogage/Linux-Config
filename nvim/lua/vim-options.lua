@@ -7,7 +7,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.signcolumn = "yes"
 
 ---Linespace
-vim.opt.linespace = 5
+vim.opt.linespace = 3
 
 --Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
