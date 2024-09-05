@@ -11,7 +11,7 @@ end
 
 
 ---Default colorscheme.
-local colorscheme = "rose-pine-moon"
+local colorscheme = "tokyodark"
 
 ---General vim configuration / options.
 require("vim-options")

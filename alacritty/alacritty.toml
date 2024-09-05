@@ -1,12 +1,14 @@
-# working_directory = "/users/gagep" # Use on windows
+working_directory = "/users/gagep" # Use on windows
 
 [colors]
-transparent_background_colors = true
+# transparent_background_colors = true
 
 [font]
-normal = {family = "Cousine Nerd Font"}
-offset = {x = 0, y = 4}
-size = 10
+normal = {family = "GoMono Nerd Font Mono"}
+# normal = {family = "ProggyClean CE Nerd Font Propo"}
+# normal = {family= "OverpassM Nerd Font Mono"}
+offset = {x = 1, y = 5}
+size = 11
 
 [keyboard]
 bindings = [
