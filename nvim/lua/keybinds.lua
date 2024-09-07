@@ -42,6 +42,10 @@ vim.keymap.set("n", "<C-t>", "<Cmd>Lspsaga term_toggle<CR>", opts)
 ---Easy align to equals shortcut.
 vim.keymap.set("v", "<leader>a", ":Tabularize /=<CR>", opts)
 
+-- Quickly search / replace on current line/selection - Or in entire buffer.
+vim.keymap.set("n", "<leader>s", ":s/", opts)
+vim.keymap.set("n", "<leader>S", ":%s/", opts)
+
 -- ╭─────────────────────────────────────────────────────────╮
 -- │ CB: Comment box.                                        │
 -- ╰─────────────────────────────────────────────────────────╯

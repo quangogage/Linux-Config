@@ -9,11 +9,11 @@ to take a break for a while and may forget.
 
 ## Important Keybinds
 
-#### Coding
-- `<CTRL-s>` - Fuzzy find in current directory.
-- `<CTRL-j>` - Autocomplete github copilot
-- `:Tabularize/{char}` - Line up highlighted code based on the char.
-- `s{char}{char}` - Search with leap. Fast code navigation.  
+#### Buffer Navigation
+- `s{char}{char}` - Search with leap. Fast code navigation.
+- `<leader>s` - Search & replace prompt `:s/`
+- `<leader>S` - Search & replace prompt for entire buffer `:S/`
+- `<leader>/` - Fuzzy search in current buffer (Much nicer way of searching).
 
 #### General Navigation
 - `<leader>h` - Open tab to the left.
