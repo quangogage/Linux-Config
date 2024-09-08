@@ -27,3 +27,21 @@
         WinWaitActive
         WinMoveTop
 }
+
+; Switch to Discord with Ctrl + Alt + v
+^!v:: {
+    if WinExist("ahk_exe Discord.exe")
+        WinActivate
+        Sleep(100)
+        WinWaitActive
+        WinMoveTop
+}
+
+; Switch to Obsidian with Ctrl + Alt + b
+^!b:: {
+    if WinExist("ahk_exe Obsidian.exe")
+        WinActivate
+        Sleep(100)
+        WinWaitActive
+        WinMoveTop
+}
