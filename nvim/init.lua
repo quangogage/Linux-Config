@@ -11,7 +11,7 @@ end
 
 
 ---Default colorscheme.
-local colorscheme = "tokyodark"
+local colorscheme = "gruvbox-material"
 
 ---General vim configuration / options.
 require("vim-options")
