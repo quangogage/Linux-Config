@@ -8,6 +8,7 @@ return {
     'HoNamDuong/hybrid.nvim',
     'stankovictab/mgz.nvim',
     'ab-dx/ares.nvim',
+    'iagorrr/noctis-high-contrast.nvim',
 
     {
       'sainnhe/gruvbox-material',
