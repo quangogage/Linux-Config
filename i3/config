@@ -10,15 +10,19 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 
-# Windows key
+# Windows key modkey
 # set $mod Mod4 
 
-# Alt key
+# Alt key modkey
 set $mod Mod1 
 
 # Refresh rate
-exec xrandr --output DP-2 --mode 1920x1080 --rate 239.76 --pos 320x0 \
---output DP-4 --mode 2560x1440 --rate 144 --primary --pos 0x1080
+exec xrandr --output DP-4 --mode 1920x1080 --rate 239.76 --primary --pos 640x1440 \
+--output DP-2 --mode 2560x1440 --rate 144 --pos 0x0 \
+--output HDMI-0 --mode 1920x1080 --pos 2560x403 --rotate right
+
+# BG color
+exec --no-startup-id xsetroot -solid "#3e3e3e"
 
 # Media volume controls
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
