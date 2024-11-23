@@ -10,27 +10,27 @@ harpoon:setup({
 })
 
 ---Add a new entry to the list of buffers
-opts.desc = "Append a new entry to the list of buffers"
-vim.keymap.set("n", "<leader>f", function() harpoon:list():append() end, opts)
-opts.desc = "Prepend a new entry to the list of buffers"
-vim.keymap.set("n", "<leader>g", function() harpoon:list():prepend() end, opts)
+opts.desc = "Harpoon Append: Append a new entry to the list of buffers"
+vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end, opts)
+opts.desc = "Harpoon Prepend: Prepend a new entry to the list of buffers"
+vim.keymap.set("n", "<leader>hp", function() harpoon:list():prepend() end, opts)
 
 ---View entire list of buffers.
-opts.desc = "View entire list of buffers"
-vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
+opts.desc = "Harpoon Show: View entire list of buffers"
+vim.keymap.set("n", "<leader>hs", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
 
-opts.desc = "Go to 1st entry in list of buffers"
+opts.desc = "Harpoon First: Go to 1st entry in list of buffers"
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end, opts)
-opts.desc = "Go to 2nd entry in list of buffers"
+opts.desc = "Harpoon Second: Go to 2nd entry in list of buffers"
 vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end, opts)
-opts.desc = "Go to 3rd entry in list of buffers"
+opts.desc = "Harpoon Third: Go to 3rd entry in list of buffers"
 vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end, opts)
-opts.desc = "Go to 4th entry in list of buffers"
+opts.desc = "Harpoon Fourth: Go to 4th entry in list of buffers"
 vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, opts)
 
 ---Toggle previous & next buffers stored within Harpoon list
-opts.desc = "Got to previous buffer in list"
-vim.keymap.set("n", "<leader>p", function() harpoon:list():prev() end, opts)
-opts.desc = "Got to next buffer in list"
-vim.keymap.set("n", "<leader>n", function() harpoon:list():next() end, opts)
+opts.desc = "Harpoon H (Like vim motion): Go to previous buffer in list"
+vim.keymap.set("n", "<leader>h", function() harpoon:list():prev() end, opts)
+opts.desc = "Harpoon L (Like vim motion): Got to next buffer in list"
+vim.keymap.set("n", "<leader>l", function() harpoon:list():next() end, opts)
 

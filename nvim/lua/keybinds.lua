@@ -11,12 +11,6 @@ vim.keymap.set("n", "<C-s>", ":Telescope live_grep<CR>", opts)
 ---Assumes you have telescope installed.
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').find_files, { desc = 'Search Files' })
 
----Tab navigation.
----(Switch tabs).
-vim.keymap.set("n", "<leader>h", "<Cmd>BufferPrevious<CR>", opts)
-vim.keymap.set("n", "<leader>l", "<Cmd>BufferNext<CR>", opts)
-vim.keymap.set("n", "<leader>W", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
-vim.keymap.set("n", "<leader>w", "<Cmd>BufferClose<CR>", opts)
 
 ---Copilot completion.
 ---C-CR = Ctrl + Enter.

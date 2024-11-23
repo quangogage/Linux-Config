@@ -11,7 +11,7 @@ end
 
 
 ---Default colorscheme.
-local colorscheme = "noctishc"
+local colorscheme = "gruvbox-material"
 
 ---General vim configuration / options.
 require("vim-options")
@@ -31,6 +31,7 @@ require("plugin-setup-scripts.nvim-cmp")
 -- require("plugin-setup-scripts.no-neck-pain")
 require("plugin-setup-scripts.zen-mode")
 require("plugin-setup-scripts.harpoon")
+--require("plugin-setup-scripts.barbar")
 
 -- require("love2d").setup({})
 require("nvim-tree").setup()

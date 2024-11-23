@@ -42,5 +42,13 @@ return {
             require("tokyodark").setup(opts) -- calling setup is optional
             vim.cmd [[colorscheme tokyodark]]
         end,
+    },
+    {
+        "luisiacc/the-matrix.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.g.thematrix_telescope_theme = 1
+        end
     }
 }

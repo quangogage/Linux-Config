@@ -30,7 +30,7 @@ vim.opt.listchars = {
     -- extends  = '…',
     -- precedes = '…',
 }
-vim.opt.list = true
+vim.opt.list = false
 
 ---Share clipboard with system.
 vim.api.nvim_set_option("clipboard", "unnamedplus")
