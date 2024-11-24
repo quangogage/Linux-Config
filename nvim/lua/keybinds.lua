@@ -1,7 +1,7 @@
 local opts = { noremap = true, silent = true } ---Used often when setting up keybinds.
 
 ---Toggle file browser
-vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
+--vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 
 ---Fuzzy finding in directory.
 ---Uses grep, only works on linux I think?

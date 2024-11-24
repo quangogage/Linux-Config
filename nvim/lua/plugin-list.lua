@@ -87,12 +87,12 @@ return {
     { "folke/which-key.nvim",          opts = {} },
 
     ---Directory browser.
-    {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-    },
+    -- {
+    --     "nvim-tree/nvim-tree.lua",
+    --     dependencies = {
+    --         "nvim-tree/nvim-web-devicons",
+    --     },
+    -- },
 
     ---"gc" to comment highlighted lines.
     { "numToStr/Comment.nvim",         opts = {} },

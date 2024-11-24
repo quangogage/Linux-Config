@@ -34,12 +34,10 @@ require("plugin-setup-scripts.harpoon")
 --require("plugin-setup-scripts.barbar")
 
 -- require("love2d").setup({})
-require("nvim-tree").setup()
 require("leap").create_default_mappings()
 require("lualine").setup({})
 require("wilder").setup({ modes = { ":", "/", "?" } })
 -- require("ibl").setup() -- An update caused this to start erroring my whole nvim. If re-enabling, make sure to also uncomment in plugin-list.lua.
-require('nvim-tree').setup({ view = { width = 40, } })
 
 
 ---General keybinds.
